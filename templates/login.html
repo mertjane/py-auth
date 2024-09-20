@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/login.css" />
+  </head>
+  <body>
+    <form method="POST" action="{{ url_for('login') }}">
+      <h2>Login</h2>
+      {% if error %}
+        <p class="error">*{{ error }}</p>
+    {% endif %}
+      <label for="username">Username</label>
+      <input type="text" name="username" placeholder="Enter your username" autocomplete="off"/>
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Enter your password" autocomplete="off"/>
+      <a href="{{url_for('forgot_pwd')}}" class="forgot_pwd" href="">Forgot password</a>
+      <button type="submit">Submit</button>
+      <p>
+        Don't have an account? <a href="{{url_for('register')}}">Signup.</a>
+      </p>
+    </form>
+  </body>
+</html>

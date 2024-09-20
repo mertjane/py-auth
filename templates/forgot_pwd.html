@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="/static/forgot_pwd.css" />
+  </head>
+  <body>
+    <form method="POST">
+      <h2>Forgot Password</h2>
+      {% if show_email_input %}
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        autocomplete="off"
+        required
+      />
+      {% endif %} {% if show_verification_input %}
+      <input type="hidden" name="email_hidden" value="{{ email }}" />
+
+      <label for="verification_code">Verification Code</label>
+      <input
+        type="text"
+        name="verification_code"
+        placeholder="Enter verification code"
+        autocomplete="off"
+        required
+      />
+      {% endif %} {% if show_new_pwd_input %}
+      <label for="new_pwd">New password</label>
+      <input
+        type="password"
+        name="new_pwd"
+        placeholder="Enter your new password"
+        autocomplete="off"
+        required
+      />
+
+      <label for="confirm_new_pwd">Confirm password</label>
+      <input
+        type="password"
+        name="confirm_new_pwd"
+        placeholder="Confirm your new password"
+        autocomplete="off"
+        required
+      />
+      {% endif %}
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

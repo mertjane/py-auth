@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/register.css">
+</head>
+<body>
+    <form method="POST" action="{{ url_for('register')}}">
+        <h2>Register</h2>
+        {% if error %}
+        <p class="error">*{{ error }}</p>
+    {% endif %}
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Choose a username" autocomplete="off"/>
+        <label for="username">Email</label>
+        <input type="text" name="email" placeholder="Enter your email" autocomplete="off"/>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Enter your password" autocomplete="off"/>
+        <label for="passwordConfirm">Confirm Password</label>
+        <input type="password" name="password_confirm" placeholder="Confirm your password" autocomplete="off"/>
+        <button type="submit">Submit</button>
+        <p>
+          Already have an account? <a href="{{url_for('login')}}">Login.</a>
+        </p>
+      </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        button{
+            margin-top: 8 0px;
+            width: 220px;
+            height: 44px;
+            background-color: #157c49;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth hover effect */
+        }
+
+        button:hover {
+            background-color: #3d9e6e; /* Change the background color on hover */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Add a subtle shadow effect on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to our platform!</h1>
+        <p>Click <a href="{{ activation_link }}">here</a> to activate your account.</p>
+    </div>
+</body>
+</html>
